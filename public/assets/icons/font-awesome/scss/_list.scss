@@ -1,0 +1,13 @@
+// List Icons
+// -------------------------
+
+.#{$fa-css-prefix}-ul {
+  padding-left: 0;
+  > li { position: relative; }
+}
+.#{$fa-css-prefix}-li {
+  position: absolute;
+  text-align: center;
+  &.#{$fa-css-prefix}-lg {
+  }
+}

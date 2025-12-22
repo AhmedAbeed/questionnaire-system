@@ -1,0 +1,196 @@
+<!-- Form Actions Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title"><i class="ri-settings-line me-2"></i>إعدادات متقدمة</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card border h-100">
+                                <div class="card-header bg-transparent">
+                                    <h6 class="mb-0">خيارات النموذج</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="requireLogin" checked>
+                                            <label class="form-check-label" for="requireLogin">يتطلب تسجيل الدخول</label>
+                                        </div>
+                                        <small class="text-secondary">سيحتاج المستجيبون إلى تسجيل الدخول قبل إكمال النموذج</small>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="showProgress" checked>
+                                            <label class="form-check-label" for="showProgress">إظهار شريط التقدم</label>
+                                        </div>
+                                        <small class="text-secondary">عرض شريط تقدم للمستجيبين أثناء إكمال النموذج</small>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="shuffleQuestions">
+                                            <label class="form-check-label" for="shuffleQuestions">خلط الأسئلة</label>
+                                        </div>
+                                        <small class="text-secondary">تغيير ترتيب الأسئلة لكل مستجيب</small>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="limitSubmissions">
+                                            <label class="form-check-label" for="limitSubmissions">تحديد عدد المشاركات</label>
+                                        </div>
+                                        <small class="text-secondary">تعيين الحد الأقصى لعدد الاستجابات المسموح بها</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card border h-100">
+                                <div class="card-header bg-transparent">
+                                    <h6 class="mb-0">رسائل النموذج</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label for="welcomeMessage" class="form-label small fw-bold">رسالة الترحيب</label>
+                                        <textarea id="welcomeMessage" class="form-control" rows="2">مرحبًا بك في استبيان تقييم المقرر. نقدر وقتك ومشاركتك في تحسين جودة التعليم.</textarea>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="completionMessage" class="form-label small fw-bold">رسالة الإكمال</label>
+                                        <textarea id="completionMessage" class="form-control" rows="2">شكرًا لإكمال الاستبيان! تساعدنا مشاركتك في تحسين تجربة التعلم للجميع.</textarea>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="buttonText" class="form-label small fw-bold">نص زر الإرسال</label>
+                                        <input type="text" id="buttonText" class="form-control" value="إرسال التقييم">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>              <!-- Question Types Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title"><i class="ri-list-check-2 me-2"></i>أنواع الأسئلة</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card h-100 border">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="badge-primary-soft p-2 rounded-circle me-3">
+                                            <i class="ri-radio-button-line text-primary fs-5"></i>
+                                        </div>
+                                        <h6 class="card-title mb-0">اختيار من متعدد</h6>
+                                    </div>
+                                    <p class="card-text small text-secondary">يسمح للمستجيب باختيار إجابة واحدة من مجموعة خيارات.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0">
+                                    <button class="btn btn-sm btn-outline-primary w-100">
+                                        <i class="ri-add-line me-1"></i> إضافة سؤال
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <div class="card h-100 border">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="badge-primary-soft p-2 rounded-circle me-3">
+                                            <i class="ri-checkbox-multiple-line text-primary fs-5"></i>
+                                        </div>
+                                        <h6 class="card-title mb-0">اختيار متعدد</h6>
+                                    </div>
+                                    <p class="card-text small text-secondary">يسمح للمستجيب باختيار أكثر من إجابة من مجموعة الخيارات.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0">
+                                    <button class="btn btn-sm btn-outline-primary w-100">
+                                        <i class="ri-add-line me-1"></i> إضافة سؤال
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <div class="card h-100 border">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="badge-primary-soft p-2 rounded-circle me-3">
+                                            <i class="ri-text text-primary fs-5"></i>
+                                        </div>
+                                        <h6 class="card-title mb-0">نص</h6>
+                                    </div>
+                                    <p class="card-text small text-secondary">يسمح للمستجيب بكتابة إجابة نصية حرة لسؤال مفتوح.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0">
+                                    <button class="btn btn-sm btn-outline-primary w-100">
+                                        <i class="ri-add-line me-1"></i> إضافة سؤال
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <div class="card h-100 border">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="badge-primary-soft p-2 rounded-circle me-3">
+                                            <i class="ri-star-line text-primary fs-5"></i>
+                                        </div>
+                                        <h6 class="card-title mb-0">تقييم</h6>
+                                    </div>
+                                    <p class="card-text small text-secondary">يسمح للمستجيب بتقييم باستخدام نظام النجوم أو الأرقام.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0">
+                                    <button class="btn btn-sm btn-outline-primary w-100">
+                                        <i class="ri-add-line me-1"></i> إضافة سؤال
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <div class="card h-100 border">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="badge-primary-soft p-2 rounded-circle me-3">
+                                            <i class="ri-scale-3-line text-primary fs-5"></i>
+                                        </div>
+                                        <h6 class="card-title mb-0">مقياس ليكرت</h6>
+                                    </div>
+                                    <p class="card-text small text-secondary">يسمح للمستجيب بتحديد درجة الموافقة أو عدم الموافقة على عبارة ما.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0">
+                                    <button class="btn btn-sm btn-outline-primary w-100">
+                                        <i class="ri-add-line me-1"></i> إضافة سؤال
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <div class="card h-100 border">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="badge-primary-soft p-2 rounded-circle me-3">
+                                            <i class="ri-calendar-line text-primary fs-5"></i>
+                                        </div>
+                                        <h6 class="card-title mb-0">تاريخ</h6>
+                                    </div>
+                                    <p class="card-text small text-secondary">يسمح للمستجيب بإدخال تاريخ كإجابة على السؤال.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0">
+                                    <button class="btn btn-sm btn-outline-primary w-100">
+                                        <i class="ri-add-line me-1"></i> إضافة سؤال
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

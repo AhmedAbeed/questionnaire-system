@@ -1,0 +1,64 @@
+// Import Fonts
+@import url('https://fonts.googleapis.com/css?family=Muli:400,600,700&display=swap');
+
+// Base Variables
+$font-primary: 'Muli', sans-serif;
+$base-font: 15px;
+$width: 100%;
+$height: 100%;
+
+// Brand Colors
+$primary: #931a23;    // Deep red (brand primary)
+$secondary: #0F2239;  // Dark navy blue (brand secondary)
+
+// Basic Colors
+$white: #ffffff;
+$black: #282828;
+$muted: #8A98AC;
+$light: #d4d8de;
+$dark: #263a5b;
+$lightgray: #d4d4d4;
+
+// State Colors
+$success: #18d26b;
+$danger: #ff3f3f;
+$warning: #ffa800;
+$info: #00b8d4;
+
+// Background Colors
+$bg-body: #f2f5fa;
+$card-bg: #ffffff;
+$topbar-bg-color: #ffffff;
+$search-bg-color: #4a5263;
+
+// Text Colors
+$heading-color: $dark;
+$table-color: $dark;
+
+// RGBA Colors
+$primary-rgba: rgba($primary, 0.1);
+$secondary-rgba: rgba($secondary, 0.1);
+$success-rgba: rgba($success, 0.1);
+$danger-rgba: rgba($danger, 0.1);
+$warning-rgba: rgba($warning, 0.1);
+$info-rgba: rgba($info, 0.1);
+$light-rgba: rgba($light, 0.1);
+$dark-rgba: rgba($dark, 0.1);
+
+// Gradients
+$bg-primary-gradient: linear-gradient(58deg, $primary 0%, darken($primary, 10%) 100%);
+$bg-secondary-gradient: linear-gradient(58deg, $secondary 0%, lighten($secondary, 15%) 100%);
+$bg-success-gradient: linear-gradient(58deg, $success 0%, lighten($success, 10%) 100%);
+$bg-danger-gradient: linear-gradient(58deg, $danger 0%, lighten($danger, 10%) 100%);
+$bg-warning-gradient: linear-gradient(58deg, $warning 0%, lighten($warning, 20%) 100%);
+$bg-info-gradient: linear-gradient(58deg, $info 0%, lighten($info, 10%) 100%);
+$bg-light-gradient: linear-gradient(58deg, #e9eff9 0%, #f8fbff 100%);
+$bg-dark-gradient: linear-gradient(58deg, #2e2e2e 0%, #4c4c4c 100%);
+
+// Shadows
+$shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+$btn-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$menu-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+// Border
+$border-color: rgba(0, 0, 0, 0.03);
