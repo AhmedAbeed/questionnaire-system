@@ -1,43 +1,52 @@
-# 📊 University Questionnaire & Survey System
+# University Questionnaire & Survey Management System
 
-A comprehensive, enterprise-grade academic survey system built with **Laravel**. This platform is designed to manage, deploy, and analyze questionnaires across the entire university ecosystem, supporting students, faculty members, and external respondents.
+A comprehensive, enterprise-grade academic survey system built with **Laravel** and **MySQL**. Developed as a **Graduation Project** and adopted as an official university-wide platform serving over **2,000+ active students** and faculty members.
 
 ![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 
-## ✨ Core Features
+---
 
-- **Dynamic Questionnaire Builder**: Create complex survey templates with multiple question types, categories, and options.
-- **Academic Structure Management**: Fully supports the university hierarchy including Faculties, Programs, Semesters, Courses, and Lectures.
-- **Targeted Deployment**: Deploy questionnaires to specific target audiences (e.g., Students in a specific course, Faculty Members, or External Respondents).
-- **Role-Based Access**: Specialized interfaces and permissions for Deans, Instructors, Students, and System Admins.
-- **Advanced Analytics & Reporting**: Generate comprehensive analytical reports with visual data. Supports PDF report downloads powered by `Spatie\Browsershot`.
-- **Background Processing & Auditing**: Tracks all system activities using Audit Logs and processes heavy tasks (like mass emails or imports) asynchronously.
+## Core Features
 
-## 🛠️ Architecture & Tech Stack
+- **Dynamic Questionnaire Builder**: Create complex survey templates supporting 10+ question types, modular categories, and conditional logic.
+- **Academic Hierarchy Integration**: Fully mirrors university organizational structures including Faculties, Programs, Semesters, Courses, and Lectures.
+- **Targeted Deployment**: Segmented deployment workflows targeting specific cohorts (e.g., students in a specific course, department faculty, or external evaluators).
+- **Role-Based Access Control (RBAC)**: Dedicated portals and granular permissions for Deans, Department Heads, Instructors, Students, and System Administrators.
+- **Advanced Analytics & Reporting**: Real-time visual data breakdowns with exportable PDF analytical summaries powered by `Spatie\Browsershot`.
+- **Background Processing & Audit Trails**: Enterprise activity logging via Audit Logs with asynchronous queue management for mass email distribution and bulk imports.
 
-- **Backend Framework**: Laravel (PHP)
-- **Database**: Relational DB (MySQL/PostgreSQL) with advanced Eloquent ORM relationships.
-- **Report Generation**: `Spatie\Browsershot` (Puppeteer) for high-quality PDF exports.
-- **Job Queues**: Built-in Laravel queuing for background tasks and reminder emails.
-- **Frontend Assets**: Managed via Vite.
+---
 
-## 🗄️ Key Data Models
+## Architecture & Tech Stack
+
+- **Backend Framework**: Laravel (PHP 8.1+)
+- **Database**: MySQL with optimized Eloquent ORM indexing and relational integrity.
+- **Report Generation**: `Spatie\Browsershot` (Puppeteer engine) for vector-quality PDF reports.
+- **Asynchronous Processing**: Laravel Queues for background batch operations.
+- **Frontend & Assets**: Vite with responsive Blade UI components.
+
+---
+
+## Key Data Entities
 
 - `DeployedQuestionnaire`, `QuestionnaireTemplate`, `Question`, `Response`
 - `Faculty`, `Program`, `Course`, `SemesterCourse`, `Lecture`
 - `User`, `Student`, `FacultyMember`, `ExternalRespondent`
 - `AuditLog`, `ImportProgress`, `BgTaskLog`
 
-## 🚀 Getting Started
+---
+
+## Getting Started
 
 ### Prerequisites
 - PHP >= 8.1
 - Composer
 - Node.js & NPM (for Vite)
-- MySQL / PostgreSQL
-- Chrome/Chromium (Required by Browsershot for PDF generation)
+- MySQL
+- Chromium (for Browsershot PDF exports)
 
 ### Installation
 
@@ -47,36 +56,36 @@ A comprehensive, enterprise-grade academic survey system built with **Laravel**.
    cd questionnaire-system
    ```
 
-2. Install PHP dependencies:
+2. Install backend dependencies:
    ```bash
    composer install
    ```
 
-3. Install frontend dependencies:
+3. Install frontend dependencies and compile assets:
    ```bash
    npm install
    npm run build
    ```
 
-4. Environment Setup:
+4. Environment Configuration:
    ```bash
    cp .env.example .env
    php artisan key:generate
    ```
-   *Configure your database credentials in the `.env` file.*
+   *Configure your database credentials in `.env`.*
 
-5. Run Database Migrations & Seeders:
+5. Run Migrations & Seeders:
    ```bash
    php artisan migrate --seed
    ```
 
-6. Start the server:
+6. Start the development server:
    ```bash
    php artisan serve
    ```
 
-## 🤝 Contributing
-Contributions, issues, and feature requests are welcome!
+---
 
-## 📝 License
+## License
+
 This project is open-source and available under the [MIT License](LICENSE).
