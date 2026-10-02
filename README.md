@@ -1,11 +1,53 @@
 # University Questionnaire & Survey Management System
 
-A comprehensive, enterprise-grade academic survey system built with **Laravel** and **MySQL**. Developed as a **Graduation Project** and adopted as an official university-wide platform serving over **2,000+ active students** and faculty members.
+A comprehensive, enterprise-grade academic survey system built with **Laravel** and **MySQL**. Developed as a **Graduation Project** and adopted as an official university-wide platform serving over **2,000+ active students** and faculty members across multiple departments.
 
 ![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Architecture: RBAC](https://img.shields.io/badge/Security-RBAC_Enforced-orange.svg?style=for-the-badge)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
+
+---
+
+## System Architecture & Workflow
+
+The platform manages the end-to-end survey lifecycle from academic cohort segmentation to automated PDF reporting.
+
+```mermaid
+graph TD
+    subgraph Roles ["Role-Based Access Control (RBAC)"]
+        ADMIN["System Admin / Deans<br/>(Faculty Hierarchy, Template Studio)"]
+        FACULTY["Instructors / Evaluators<br/>(Targeted Deployments, Live Analytics)"]
+        STUDENT["Students / External Respondents<br/>(Form Responses, Secure Tokens)"]
+    end
+
+    subgraph CoreEngine ["Laravel Application Engine"]
+        ROUTING["Authentication & Middleware Guard"]
+        BUILDER["Dynamic Form & Questionnaire Engine"]
+        DEPLOY["Cohort Segmentation & Deployment Manager"]
+        QUEUES["Async Job Queue (Mass Email & Reminders)"]
+        PDF["PDF Generator (Spatie Browsershot & Puppeteer)"]
+    end
+
+    subgraph DataStorage ["Data & Audit Layer (MySQL)"]
+        ENTITIES["Academic Structure<br/>(Faculties, Courses, Semesters)"]
+        SURVEYS["Questionnaires, Responses, Results"]
+        AUDIT["Immutable Audit Trails & Activity Logs"]
+    end
+
+    ADMIN -->|"Configure System & Templates"| ROUTING
+    FACULTY -->|"Deploy to Specific Cohort"| ROUTING
+    STUDENT -->|"Submit Survey Responses"| ROUTING
+
+    ROUTING --> BUILDER
+    BUILDER --> DEPLOY
+    DEPLOY -->|"Dispatches Jobs"| QUEUES
+    DEPLOY -->|"Reads / Writes"| SURVEYS
+    SURVEYS -->|"Feeds Analytics"| PDF
+    CoreEngine -->|"Tracks Actions"| AUDIT
+    CoreEngine -->|"Mirrors Structure"| ENTITIES
+```
 
 ---
 
